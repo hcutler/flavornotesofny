@@ -14,29 +14,85 @@
     <div class="title">
         <h1>Flavor Notes of NY</h1>
     </div>
+    <div class="search">
+      <form class="pure-form">
+          <input class="pure-input-1-4" id="address-form" type="text" placeholder="Address">
+          <a class="submit-button pure-button pure-button-primary" onclick="myFunction()">Search</a>
+          <br/>
+      </form>
+    </div>
 
-
-    <form class="pure-form">
-        <input class="pure-input-1-4" id="address-form" type="text" placeholder="Address">
-        <a class="submit-button pure-button pure-button-primary" onclick="myFunction()">Find an apple tree!</a>
-        <br/>
-    </form>
     <br/>
 
+    <div class="pure-g">
+    <div class="pure-u-7-24">
+      <div class="toggle-div">
 
-    <p>PLUM</p><div id="toggle-button-plum" class="toggle-button plum toggle-button-selected">
-        <button value="0"></button>
+
+
+
+          <ul>
+
+              <li>
+
+                  <div id="toggle-button-plum" class="toggle-button plum toggle-button-selected">
+                      <button value="0"></button>
+                  </div>
+                  <p>Plum</p>
+              </li>
+              <li>
+
+                  <div id="toggle-button-cherry" class="toggle-button cherry toggle-button-selected">
+                      <button value="1"></button>
+                  </div>
+                  <p>Black Cherry</p>
+              </li>
+
+              <li>
+
+                  <div id="toggle-button-ginko" class="toggle-button ginko toggle-button-selected">
+                      <button value="2"></button>
+                  </div>
+                  <p>Gingko</p>
+              </li>
+
+              <li>
+
+                  <div id="toggle-button-coffee" class="toggle-button coffee toggle-button-selected">
+                      <button value="3"></button>
+                  </div>
+                  <p>Coffee</p>
+              </li>
+
+              <li>
+
+                  <div id="toggle-button-cornelian-cherry" class="toggle-button cornelian-cherry toggle-button-selected">
+                      <button value="4"></button>
+                  </div>
+                  <p>Cornelian Cherry</p>
+              </li>
+
+              <li>
+
+                  <div id="toggle-button-chinese-chestnut" class="toggle-button chinese-chestnut toggle-button-selected">
+                      <button value="5"></button>
+                  </div>
+                  <p>Chinese Chestnut</p>
+              </li>
+
+          </ul>
+
     </div>
-    <p>CHERRY</p> <div id="toggle-button-cherry" class="toggle-button cherry toggle-button-selected">
-        <button  value="1"></button>
+          </div>
+    <div class="pure-u-17-24">
+  <div id="map"></div>
+
     </div>
-    <p>GINKO</p> <div id="toggle-button-ginko" class="toggle-button ginko toggle-button-selected">
-        <button value="2"></button>
-    </div>
-    <p>COFFEE</p> <div id="toggle-button-coffee" class="toggle-button coffee toggle-button-selected">
-        <button value="3"></button>
-    </div>
-    <div id="map"></div>
+  </div>
+
+
+
+
 
     <script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
     <script src="js/cartomap.js"></script>
@@ -53,6 +109,9 @@
         $("#toggle-button-cherry").on('click', toggleButtonClickEvent);
         $("#toggle-button-ginko").on('click', toggleButtonClickEvent);
         $("#toggle-button-coffee").on('click', toggleButtonClickEvent);
+        $("#toggle-button-cornelian-cherry").on('click', toggleButtonClickEvent);
+        $("#toggle-button-chinese-chestnut").on('click', toggleButtonClickEvent);
+
         // $(document).on('click', '.toggle-button',
 
 

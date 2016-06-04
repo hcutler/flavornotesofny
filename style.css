@@ -1,11 +1,38 @@
 body {
-    padding: 10%;
+    padding: 5%;
+    background-image: url("background.jpg");
+    background-size:100%;
+
+}
+h1{
+  background-color: white;
+padding: 10px;
+width: 300px;
+opacity: .8;
+border-radius: 25px;
+}
+.toggle-div{
+  background-color: white;
+opacity: .8;
+border-radius: 25px;
+}
+p{
+  display: inline-block;
+}
+li{
+  display:block;
 }
 #map {
     height: 500px;
     width: 100%;
     padding: 0;
     margin: 0;
+}
+#address-form{
+  width: 500px;
+}
+.search{
+  display: flex;
 }
 .toggle-button {
     background-color: white;
@@ -40,8 +67,29 @@ body {
 }
 .toggle-button-selected {
     background-color: #83B152;
-    border: 2px solid #7DA652;
 }
+
+.plum {
+  background-color: purple;
+}
+
+.cherry{
+  background-color:#ab253d;
+}
+.ginko{
+  background-color: #25ab42;
+}
+.coffee{
+  background-color: #f9b30a;
+}
+.cornelian-cherry{
+  background-color: #b41111;
+}
+.chinese-chestnut{
+  background-color: #35a2cc;
+}
+
+
 .toggle-button-selected button {
     left: 26px;
     top: 0;
