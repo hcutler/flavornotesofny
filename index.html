@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Open Apple </title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="title">
+        <h1>Flavor Notes of NY</h1>
+    </div>
+
+
+    <form class="pure-form">
+        <input class="pure-input-1-4" id="address-form" type="text" placeholder="Address">
+        <a class="submit-button pure-button pure-button-primary" onclick="myFunction()">Find an apple tree!</a>
+        <br/>
+    </form>
+    <br/>
+
+
+    <p>PLUM</p><div id="toggle-button-plum" class="toggle-button plum toggle-button-selected">
+        <button value="0"></button>
+    </div>
+    <p>CHERRY</p> <div id="toggle-button-cherry" class="toggle-button cherry toggle-button-selected">
+        <button  value="1"></button>
+    </div>
+    <p>GINKO</p> <div id="toggle-button-ginko" class="toggle-button ginko toggle-button-selected">
+        <button value="2"></button>
+    </div>
+    <p>COFFEE</p> <div id="toggle-button-coffee" class="toggle-button coffee toggle-button-selected">
+        <button value="3"></button>
+    </div>
+    <div id="map"></div>
+
+    <script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
+    <script src="js/cartomap.js"></script>
+    <script>
+        function toggleButtonClickEvent(event) {
+            $(this).toggleClass('toggle-button-selected');
+            var button = event.toElement.children[0];
+            button_value = button.value;
+            var crap_toggle = $(".cartodb-dropdown")[0].children[0].children[button_value].children[1];
+            console.log(crap_toggle);
+            crap_toggle.click();
+        };
+        $("#toggle-button-plum").on('click', toggleButtonClickEvent);
+        $("#toggle-button-cherry").on('click', toggleButtonClickEvent);
+        $("#toggle-button-ginko").on('click', toggleButtonClickEvent);
+        $("#toggle-button-coffee").on('click', toggleButtonClickEvent);
+        // $(document).on('click', '.toggle-button',
+
+
+
+        function myFunction(event) {
+            var search = document.getElementsByClassName("cartodb-searchbox")[0].children[0].children[1]
+            var form = document.getElementsByClassName("cartodb-searchbox")[0].children[0].children[2]
+            var text = processFormData();
+            console.log(text.value);
+            search.value = text.value;
+            form.click();
+        }
+
+        function processFormData() {
+            var input = document.getElementById("address-form");
+            return input;
+        }
+
+        $("#address-form").keypress(function(event) {
+            if (event.which == 13) {
+                event.preventDefault();
+                console.log("entered!");
+                myFunction();
+            }
+        });
+    </script>
+</body>
+
+</html>
