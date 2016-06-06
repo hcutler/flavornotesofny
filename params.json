@@ -1,0 +1,6 @@
+{
+  "name": "Flavor Notes of NY",
+  "tagline": "Mapping the Urban Harvest of NYC",
+  "body": "### Introduction\r\nFlavor Notes of NY is a visualization of NYC's urban harvest and is a project generated from the (2016 Treescount! Data Jam)[http://treescountdatajam.devpost.com/]. Using the (2015 NYC Parks treescount dataset)[https://data.cityofnewyork.us/Environment/2015-Street-Tree-Census-Tree-Data/uvpi-gqnh], we seek to sustain public engagement as it relates to urban exploration and local food awareness.\r\n\r\n### Architecture\r\n\r\nThe map viz is built in CartoDB with layers for each fruit type. \r\nFrontend dev done w/ vanilla JS, some jquery, and (purecss.io)[purecss.io]\r\n\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
